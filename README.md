@@ -44,3 +44,9 @@ After opening the project folder in Colab, install the module requirements and r
 ```
 
 The support assistant uses deterministic mock mode by default and requires no LLM API key.
+## Where to review the results
+
+- `data_pipeline/query_results.md` records the executed SQL queries and their outputs.
+- `analytics/eda_results.md` records the dataset profile, charts, and interpretations.
+- `analytics/model_results.md` records model metrics and the final recommendation.
+- `support_assistant/example_responses.md` records policy and general-question JSON responses.
