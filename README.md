@@ -32,3 +32,21 @@ The analytics first step initially calls `sns.load_dataset('titanic')` and write
 ## Git workflow
 
 The included Git history has two commits on `feature/platform` merged into `main`. Inspect it with `git log --graph --all --oneline`. Publish **this one repository** to a public GitHub repository and submit only its URL. Review and adapt the code and written interpretations as your own work before an academic submission.
+## Running in Google Colab
+
+After opening the project folder in Colab, install the module requirements and run the scripts in order:
+
+```python
+!pip install -r data_pipeline/requirements.txt -r analytics/requirements.txt -r support_assistant/requirements.txt
+!python data_pipeline/pipeline.py
+!python analytics/01_eda.py
+!python analytics/02_modeling.py
+```
+
+The support assistant uses deterministic mock mode by default and requires no LLM API key.
+## Where to review the results
+
+- `data_pipeline/query_results.md` records the executed SQL queries and their outputs.
+- `analytics/eda_results.md` records the dataset profile, charts, and interpretations.
+- `analytics/model_results.md` records model metrics and the final recommendation.
+- `support_assistant/example_responses.md` records policy and general-question JSON responses.
